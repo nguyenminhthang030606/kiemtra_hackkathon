@@ -80,13 +80,13 @@ function removeMusicByTitle() {
     );
 
     if (index === -1) {
-        alert("Không tìm thấy bài hát!");
+        alert("Không tìm thấy bài hát");
         return;
     }
 
-    if (confirm("Bạn có chắc muốn xóa không?")) {
+    if (confirm("Bạn có chắc muốn xóa không")) {
         musicList.splice(index, 1);
-        alert("Xóa thành công!");
+        alert("Xóa thành công");
     }
 }
 
@@ -166,7 +166,7 @@ function searchMusic() {
         song.artist.toLowerCase().includes(keyword.toLowerCase())
     );
     if (results.length === 0) {
-        alert("Không tìm thấy bài hát nào!");
+        alert("Không tìm thấy bài hát nào");
         return;
     }
     let resultText = " KẾT QUẢ TÌM KIẾM \n";
@@ -193,7 +193,7 @@ function searchGenre() {
 
     let results = musicList.filter(song => song.genre === genre);
     if (results.length === 0) {
-        alert("Không tìm thấy bài hát nào trong thể loại này!");
+        alert("Không tìm thấy bài hát nào trong thể loại này");
         return;
     }
     let resultText = `Kết quả : ${genre}\n`;
@@ -258,3 +258,4 @@ do {
 
 
 } while (choice !== '0');
+
