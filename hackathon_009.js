@@ -182,7 +182,6 @@ function searchGenre() {
         genre = prompt("Nhập thể loại cần tìm (Pop, Rap, Ballad, Rock, Electronic, Indie):");
         if (!genre) return;
         genre = genre.trim();
-        // allow case‑insensitive match
         const normalized = validGenres.find(g => g.toLowerCase() === genre.toLowerCase());
         if (!normalized) {
             alert("Thể loại không hợp lệ");
@@ -256,5 +255,6 @@ do {
         default:
             alert("Lựa chọn không hợp lệ!");
     }
+
 
 } while (choice !== '0');
